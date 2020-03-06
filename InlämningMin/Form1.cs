@@ -12,6 +12,8 @@ namespace InlämningMin
 {
     public partial class Form1 : Form
     {
+
+        //Hej Github
         bool x = false;
         double första = 0;
         double andra = 0;

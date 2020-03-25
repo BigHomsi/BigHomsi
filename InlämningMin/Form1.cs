@@ -14,7 +14,7 @@ namespace InlämningMin
     {
 
         //Hej Github
-        bool x = false;
+        bool harkomma = false;
         double första = 0;
         double andra = 0;
 
@@ -52,32 +52,32 @@ namespace InlämningMin
 
         private void Button4_Click(object sender, EventArgs e)
         {
-
+            
             richTextBox1.Text = (1 / double.Parse(richTextBox1.Text)).ToString();
 
         }
 
         private void Komma_Click(object sender, EventArgs e)
         {
-            if (x == false)
+            if (harkomma == false)
             {
                 richTextBox1.Text += ",";
-                x = true;
+                harkomma = true;
             }
         }
 
         private void Plus_Click(object sender, EventArgs e)
         {
-            första = double.Parse(richTextBox1.Text);
-
-            Reset();
+           
 
         }
 
 
         private void Minus_Click(object sender, EventArgs e)
         {
+            första = double.Parse(richTextBox1.Text);
 
+            Reset();
         }
 
         private void Multiplikation_Click(object sender, EventArgs e)
@@ -132,13 +132,26 @@ namespace InlämningMin
           private void Reset()
         {
             richTextBox1.Clear();
-            x = false;
+            harkomma = false;
         }
         private void Reset_Allt()
         {
             första = 0;
             andra = 0;
             Reset();
+        }
+
+        private void Plus()
+        {
+            första = double.Parse(richTextBox1.Text);
+           
+
+            andra = double.Parse(richTextBox1.Text);
+
+            double sum = första + andra;
+
+            richTextBox1.Text = sum.ToString();
+
         }
     
     }
